@@ -1,4 +1,4 @@
-package org.athenian.dsl
+package org.athenian.slides.receiver
 
 object ReceiverAddress {
 

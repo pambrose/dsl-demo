@@ -10,9 +10,14 @@ data class Address(
   var city: String? = null
 )
 
-fun person(block: Person.() -> Unit) = Person().apply { block(this) }
+@DslMarker
+annotation class PersonDslMarker
 
-fun Person.address(block: Address.() -> Unit) {
+@PersonDslMarker
+inline fun person(block: Person.() -> Unit) = Person().apply { block(this) }
+
+@PersonDslMarker
+inline fun Person.address(block: Address.() -> Unit) {
   address = Address().apply { block(this) }
 }
 

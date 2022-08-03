@@ -1,6 +1,6 @@
-package org.athenian.nonlambda
+package org.athenian.slides.nonlambda
 
-object Person1 {
+object DataClasses {
 //sampleStart
 
   data class Person(

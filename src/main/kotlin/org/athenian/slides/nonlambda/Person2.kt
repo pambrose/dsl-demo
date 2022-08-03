@@ -1,7 +1,6 @@
-package org.athenian.nonlambda
+package org.athenian.slides.nonlambda
 
 object Person2 {
-
   data class Person(
     var name: String? = null,
     var age: Int? = null,
@@ -16,11 +15,20 @@ object Person2 {
   )
 
   @JvmStatic
-  //sampleStart
+//sampleStart
 
   fun main(args: Array<String>) {
-    val person = Person("John Doe", 30, Address("1st St", 23, "Tulsa"))
+    val person = Person(
+      name = "John Doe",
+      age = 30,
+      address = Address(
+        street = "1st St",
+        number = 23,
+        city = "Tulsa"
+      )
+    )
     println(person)
   }
-  //sampleEnd
+
+//sampleEnd
 }

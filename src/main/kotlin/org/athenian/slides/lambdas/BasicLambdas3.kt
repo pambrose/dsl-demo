@@ -12,5 +12,6 @@ fun main() {
   println(strLength("Hello"))
   println(doubleStr("World"))
   println(nStr("Summer", 6))
+  println("Winter".nStr(4))
   //sampleEnd
 }

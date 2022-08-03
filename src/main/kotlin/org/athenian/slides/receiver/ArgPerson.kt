@@ -14,7 +14,7 @@ object ArgPerson {
     var city: String? = null
   )
 
-  // fun person(block: (Person) -> Unit) = Person().apply { block(this) }
+  // fun person(block: (Person) -> Unit) = Person().apply { block() }
 
   //sampleStart
 

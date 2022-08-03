@@ -14,11 +14,11 @@ data class Address(
 annotation class PersonDslMarker
 
 @PersonDslMarker
-inline fun person(block: Person.() -> Unit) = Person().apply { block(this) }
+inline fun person(block: Person.() -> Unit) = Person().apply { block() }
 
 @PersonDslMarker
 inline fun Person.address(block: Address.() -> Unit) {
-  address = Address().apply { block(this) }
+  address = Address().apply { block() }
 }
 
 fun main(args: Array<String>) {

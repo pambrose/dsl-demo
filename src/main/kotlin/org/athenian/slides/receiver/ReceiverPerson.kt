@@ -14,12 +14,12 @@ object ReceiverPerson {
     var city: String? = null
   )
 
-  //fun person(block: Person.() -> Unit) = Person().apply { block(this) }
+  //fun person(block: Person.() -> Unit) = Person().apply { block() }
 
   //sampleStart
   fun person(block: Person.() -> Unit): Person {
     val p = Person()
-    block(p)
+    p.block()
     return p
   }
 

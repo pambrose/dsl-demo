@@ -1,0 +1,15 @@
+[versions]
+ben-manes-versions = "0.54.0"
+junit-jupiter = "5.11.4"
+kotlin = "2.3.21"
+
+[libraries]
+kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlin" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit-jupiter" }
+
+[bundles]
+junit5 = ["kotlin-test-junit5", "junit-jupiter-engine"]
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+ben-manes-versions = { id = "com.github.ben-manes.versions", version.ref = "ben-manes-versions" }

@@ -1,22 +1,22 @@
+@DslMarker
+annotation class PersonDslMarker
+
+@PersonDslMarker
 data class Person(
   var name: String? = null,
   var age: Int? = null,
   var address: Address? = null
 )
 
+@PersonDslMarker
 data class Address(
   var street: String? = null,
   var number: Int? = null,
   var city: String? = null
 )
 
-@DslMarker
-annotation class PersonDslMarker
-
-@PersonDslMarker
 inline fun person(block: Person.() -> Unit) = Person().apply { block() }
 
-@PersonDslMarker
 inline fun Person.address(block: Address.() -> Unit) {
   address = Address().apply { block() }
 }
